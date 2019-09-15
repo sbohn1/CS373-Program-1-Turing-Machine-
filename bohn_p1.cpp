@@ -24,6 +24,8 @@ int main(int argc, char* argv[]) {
 	TuringMachine tm(argv[2], atoi(argv[3]));
 	tm.parseData(fin, argv[1]);
 
+	Tape tape = tm.getTape();
+
 	//Run the turing machine, which will output its step and its exit state
 	exitState  exit = tm.runMachine();
 
